@@ -39,5 +39,11 @@ Moreover, the following variables provide some information on the results:
 
 If there is no feasible solution for the optimization all above variables will be empty. 
 
+## The overproduction of ethanol in E. coli
+
+To overproduce ethanol in E. coli to its 30% of its maximum production at reduction in growth not larger than 50% of the optimal, the code GeneReg_ethanol is provided. This code is slightly different than the general form of GeneReg. In GeneReg_ethanol the feasible flux range for reactions in the whole flux cone and at the optimal growth are provided from 'v_min.mat', 'v_max.mat', 'v0_l.mat' and 'v0_u.mat' files. The iJR904 model used for this overproduction is also provided in https://github.com/MonaRazaghi/GeneReg. The objective reaction in this model is called 'Ethanol exchange', which is the reaction number 329 in the model.
+
+In general to use GeneReg for an specific optimization purpose, one needs to find the appropriate reaction or add a sink reaction to the model. FVA needs to be used to calculate the feasible minimum and maximum flux values for reactions in the whole flux cone and also at the optimal growth. Due to the diversity of GPR rules presentation in the models, one also may need to adapt the rules (similar to what is done in GeneReg for ecoli_core_model).
+
 ## Authors: Zahra Razaghi-Moghadam, Zoran Nikoloski
 
